@@ -37,7 +37,7 @@ Esses itens não são obrigatórios, porém desejados.
 
 
 # 🖥 O que desenvolver?
-Voceê deverá construir uma API que faça jogos da mega sena, o usuario deverá escolher a quantidade de dezenas por jogo e sua API irá gerar aleatoriamente dezenas para o usuário. O usuário poderá consultar o resultado do ultimo jogo e comparar com suas dezenas para conferir quantos numeros acertou.
+Você deverá construir uma API que faça jogos da mega sena, o usuario deverá escolher a quantidade de dezenas por jogo e sua API irá gerar aleatoriamente dezenas para o usuário. O usuário poderá consultar o resultado do ultimo jogo e comparar com suas dezenas para conferir quantos numeros acertou.
 
 - IMPORTANTE: Para obter o ultimo resultado da megasena você deverá fazer um webscrapping no Google. A seguinte pesquisa te traz o que você precisa obter: https://www.google.com/search?q=caixa+mega+sena 
 
