@@ -1,6 +1,6 @@
 # Mega-Sena API
 
-    This app is designed to make the user's CRUD, create Mega-Sena games randomly for the logged user, lists all his games, compare with the last draw of the Mega-Sena and return how many numbers the user hit.
+This app is designed to make the user's CRUD, create Mega-Sena games randomly for the logged user, lists all his games, compare with the last draw of the Mega-Sena and return how many numbers the user hit.
 
 ## install
 
