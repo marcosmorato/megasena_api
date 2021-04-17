@@ -88,7 +88,7 @@ def login():
     return {"access_token": access_token, "fresh_token": fresh_token}, HTTPStatus.OK
 
 
-@bp_user.route("/users", methods=["PATCH", "PUT"])
+@bp_user.route("/users", methods=["PATCH"])
 @jwt_required()
 def edit_user():
 
@@ -98,26 +98,15 @@ def edit_user():
 
     body: dict = request.get_json()
 
-    email = body.get("email")
-    password = body.get("password")
-    first_name = body.get("first_name")
-    last_name = body.get("last_name")
-
-    check_email = UserModel.query.filter_by(email=email).first()
+    check_email = UserModel.query.filter_by(email=body.get("email")).first()
 
     if check_email:
         return {"msg": "Email already exists"}, HTTPStatus.BAD_REQUEST
 
     found_user: UserModel = UserModel.query.get(user_id)
 
-    if email:
-        found_user.email = email
-    if password:
-        found_user.password = password
-    if first_name:
-        found_user.first_name = first_name
-    if last_name:
-        found_user.last_name = last_name
+    for key, value in body.items():
+        setattr(found_user, key, value)
 
     session.add(found_user)
     session.commit()
